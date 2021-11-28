@@ -7,7 +7,6 @@ import os
 DATA_PATH = "data/raw.csv"
 
 def request_data(base = "AUD", path = DATA_PATH):
-    
 
     # free currency api key should be an env variable export API_FX=key
     api_key = os.getenv('API_FX')
