@@ -51,6 +51,7 @@ plot_df = pd.DataFrame(
 plot_df[plot_df == 0] = np.nan
 plot_df.interpolate(method="cubic", inplace=True)
 fig, ax = plt.subplots(dpi=300, figsize=(4, 3))
+# TODO: This needs to filter by the last two weeks
 plot_df[plot_df.index >= '2021-11-01'].plot(ax=ax)
 
 print("Models finished.")
@@ -66,5 +67,5 @@ app.layout = html.Div(
 )
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
-    # serve(app.server, host="0.0.0.0", port=8080)
+    # app.run_server(debug=True)
+    serve(app.server, host="0.0.0.0", port=8080)
