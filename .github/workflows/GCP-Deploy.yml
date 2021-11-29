@@ -14,7 +14,7 @@ jobs:
         name: Setup Gcloud Account
         runs-on: ubuntu-latest
         env:
-          IMAGE_NAME: gcr.io/automl-ts/autoMLfx
+          IMAGE_NAME: gcr.io/automl-ts/automlfx
         steps:
         
         - name: Login
