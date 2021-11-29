@@ -14,7 +14,7 @@ jobs:
         name: Setup Gcloud Account
         runs-on: ubuntu-latest
         env:
-          IMAGE_NAME: gcr.io/${{ secrets.GCP_PROJECT_ID }}/${{ secrets.GCP_APP_NAME }}
+          IMAGE_NAME: gcr.io/automl-ts/autoMLfx
         steps:
         
         - name: Login
@@ -31,10 +31,10 @@ jobs:
           uses: actions/checkout@v2
 
         - name: Build Docker image
-          run: docker build . -t ${{ IMAGE_NAME }}
+          run: docker build . -t $IMAGE_NAME 
 
         - name: Push Docker image
-          run: docker push ${{ IMAGE_NAME }}
+          run: docker push $IMAGE_NAME
 
         - name: Deploy Docker image
-          run: gcloud run deploy ${{ secrets.GCP_PROJECT_ID }} --image ${{ IMAGE_NAME }} --region us-central1 --platform managed
+          run: gcloud run deploy ${{ secrets.GCP_PROJECT_ID }} --image $IMAGE_NAME --region us-central1 --platform managed
