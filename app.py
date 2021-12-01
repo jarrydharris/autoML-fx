@@ -1,14 +1,12 @@
 import dash
-from dash import dcc
-from dash import html
-from dash.dependencies import Input, Output, State
-from waitress import serve
-
-import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
 from autots import AutoTS
+from dash import dcc, html
+from dash.dependencies import Input, Output, State
 from plotly.tools import mpl_to_plotly
+from waitress import serve
 
 DATA_PATH = "data/raw.csv"
 
@@ -16,9 +14,9 @@ model = AutoTS(
     forecast_length=14,
     frequency='D',
     prediction_interval=0.9,
-    ensemble='simple',
-    model_list="fast", 
-    transformer_list="fast",  
+    ensemble='None', #simple
+    model_list="superfast", #fast
+    transformer_list="superfast",  #fast 
     drop_most_recent=1,
     max_generations=1, #10
     num_validations=1, #3

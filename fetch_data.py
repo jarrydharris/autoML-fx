@@ -1,8 +1,9 @@
+import json
+import os
+from datetime import date, datetime, timedelta
+
 import pandas as pd
 import requests
-import json
-from datetime import date, timedelta, datetime
-import os
 
 DATA_PATH = "data/raw.csv"
 
