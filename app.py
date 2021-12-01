@@ -14,12 +14,12 @@ model = AutoTS(
     forecast_length=14,
     frequency='D',
     prediction_interval=0.9,
-    ensemble='None', #simple
-    model_list="superfast", #fast
-    transformer_list="superfast",  #fast 
+    ensemble='simple', #simple
+    model_list="fast", #fast
+    transformer_list="fast",  #fast 
     drop_most_recent=1,
-    max_generations=1, #10
-    num_validations=1, #3
+    max_generations=10, #10
+    num_validations=3, #3
     validation_method="backwards"
 )
 
