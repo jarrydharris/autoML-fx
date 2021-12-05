@@ -4,7 +4,7 @@
  
 ## Demo
  
-[Click here!](https://automlservice-5gzjmk3g3a-uc.a.run.app/) (Might be slow to boot, currently working on this)
+No Demo available at the moment, took it down because of billing issues :D
  
 ## Description
  
